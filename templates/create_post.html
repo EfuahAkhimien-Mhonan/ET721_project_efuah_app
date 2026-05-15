@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block sitetitle %}Create Post{% endblock %}
+
+{% block content %}
+<h1 class="title">Create a Blog Post</h1>
+
+<form method="POST">
+    <input type="text" name="title" placeholder="Title" required><br><br>
+    <textarea name="content" placeholder="Write your post..." required></textarea><br><br>
+    <button type="submit" class="btn_login">Post</button>
+</form>
+
+<a href="{{ url_for('blog') }}">Back to Blog</a>
+{% endblock %}

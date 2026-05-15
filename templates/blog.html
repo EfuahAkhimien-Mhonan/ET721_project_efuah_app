@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block sitetitle %}Blog{% endblock %}
+
+{% block content %}
+<h1 class="title">Blog Posts</h1>
+
+<a href="{{ url_for('create_post') }}">Create New Post</a>
+
+{% for post in posts %}
+    <div>
+        <h3>{{ post[1] }}</h3>
+        <p>{{ post[2] }}</p>
+    </div>
+{% endfor %}
+
+<a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+{% endblock %}

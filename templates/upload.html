@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block sitetitle %}Upload Image{% endblock %}
+
+{% block content %}
+<h1 class="title">Upload Notes</h1>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" required>
+    <button type="submit" class="btn_login">Upload</button>
+</form>
+
+<a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+{% endblock %}
